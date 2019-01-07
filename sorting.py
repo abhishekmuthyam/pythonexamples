@@ -12,14 +12,8 @@ class Sorting:
             k += 1
        
         res.sort()
+        print(list(set(res)))
 
-    def remDupFun(res, arrayLen):
-        mp = {i : 0 for i in res}
-        for i in range(arrayLen):
-            if mp[res[i]] == 0:
-                print(res[i], end =" ")
-                mp[res[i]] = 1
-        
 
 arr1 = [ 8, 7, 9,6 ] 
 arr2 = [ 6, 8, 10,5] 
@@ -30,5 +24,3 @@ arrayLen = arr1Len +arr2Len
 res = [0 for i in range(arr1Len + arr2Len)]
 
 Sorting.mergeFun(arr1, arr2, res, arr1Len, arr2Len)
-
-Sorting.remDupFun(res,arrayLen)
